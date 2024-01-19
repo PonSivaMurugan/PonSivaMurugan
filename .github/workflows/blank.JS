@@ -31,6 +31,19 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: |
+        run: |graph LR
+A[Sustainable Farms Inc. proposes production plan and financing request] --> B{Input Capital analyzes proposal and negotiates terms}
+B -->|Approve| C{Capital Stream Contract signed}
+B -->|Reject| A
+C --> D{Input Capital provides financing}
+D --> E{Sustainable Farms Inc. implements production plan}
+E --> F{Input Capital monitors production (optional)}
+E --> G{Sustainable Farms Inc. delivers canola}
+G --> H{Input Capital sells canola}
+H --> I{Final price determined}
+I --> J{Input Capital pays Sustainable Farms Inc.}
+J --> K{Contract fulfilled}
+K --> |Sustainable Farms Inc.| L{Reinvest in farm}
+K --> |Input Capital| M{Continue business}
           echo Add other actions to build,
           echo test, and deploy your project.
